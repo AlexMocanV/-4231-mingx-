@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+ long long int n,i,a,uc,minia=10;
+int main()
+{
+   
+    cin>>n>>a;
+    while(n>0)
+    {
+        uc=n%10;
+        if(uc>a)
+        {
+            if(minia>uc)
+            {
+                minia=uc;
+            }
+        }
+        n=n/10;
+    }
+    if(minia==10)
+    {
+        cout<<-1;
+    }
+    else
+    cout<<minia;
+    return 0;
+}
